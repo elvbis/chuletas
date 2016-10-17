@@ -7,7 +7,7 @@ git config credential.helper store											   #store user pass
 
 git branch -d the_local_branch                                                 #delete branch local
 git push origin :the_remote_branch											   #delete branch remote
-git rebase --onto branch~3 branch~1 branch
+git rebase --onto branch~3 branch~1 branch									   #delete commit local
 git cherry -v                    											   #If you need to find out which of your local commits are not on the remote server do this:
 git reset --hard origin/master												   #if you want get change remote
 git revert dd61ab32															   #if revert on commit hash
