@@ -15,4 +15,16 @@ iface eth0 inet static
   network 192.168.1.0
   broadcast 192.168.1.255
   
-  
+############################################################Installation postgresql
+ 
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+	sudo -i -u postgres
+	psql
+		\l			*show list databases
+		\password postgres
+		\q			*You should now be back in the postgres Linux command prompt.
+	\conninfo
+	sudo vim /etc/postgresql/9.1/main/pg_hba.conf
+	\du			* list role
+sudo /etc/init.d/postgresql {start|stop|restart|reload|force-reload|status} [version ..]
