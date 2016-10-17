@@ -14,9 +14,16 @@ iface eth0 inet static
   netmask 255.255.255.0
   network 192.168.1.0
   broadcast 192.168.1.255
-  
-############################################################Installation postgresql
  
+############################################################installation guesst adition
+sudo apt-get install virtualbox-guest-x11
+sudo reboot now
+sudo mount -t vboxsf <folder share> /media/folder create on ubuntu
+cd into folder create on ubuntu server
+############################################################Installation postgresql
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+sudo apt-get install oracle-javaxx-installer *xx version 6,7,8
 sudo apt-get update
 sudo apt-get install postgresql postgresql-contrib
 	sudo -i -u postgres
@@ -24,7 +31,16 @@ sudo apt-get install postgresql postgresql-contrib
 		\l			*show list databases
 		\password postgres
 		\q			*You should now be back in the postgres Linux command prompt.
-	\conninfo
-	sudo vim /etc/postgresql/9.1/main/pg_hba.conf
-	\du			* list role
+		\conninfo
+		\du			* list role
+sudo vim /etc/postgresql/9.1/main/pg_hba.conf
 sudo /etc/init.d/postgresql {start|stop|restart|reload|force-reload|status} [version ..]
+
+############################################################Installation samba
+
+sudo apt-get install update
+sudo apt-get install samba smbclient
+	sudo mkdir /var/xxxx
+	sudo chmod 777 /var/xxxx
+sudo vim /etc/samba/smb.conig    * change workgroup and add folder share on ubuntu server /var/ xxx
+sudo /etc/init.d/samba restart
