@@ -44,3 +44,13 @@ sudo apt-get install samba smbclient
 	sudo chmod 777 /var/xxxx
 sudo vim /etc/samba/smb.conig    * change workgroup and add folder share on ubuntu server /var/ xxx
 sudo /etc/init.d/samba restart
+
+############################################################Installation xampp
+
+sudo chmod +x xampp-linux-x64-5.6.8-0-installer.run
+sudo ./xampp-linux-x64-5.6.8-0-installer.run
+	sudo /opt/lampp/lampp start | stop | restart
+	sudo vim /opt/lampp/etc/extra/httpd-xampp.conf 			* for config ip´s
+	<Directory "/opt/lampp/phpmyadmin">AllowOverride AuthConfig Limit Order allow,deny Require all granted Allow from all </Directory>
+sudo cp -R apachetomcat /opt
+sudo /opt/tomcat/bin/catalina.sh start 
