@@ -54,3 +54,17 @@ sudo ./xampp-linux-x64-5.6.8-0-installer.run
 	<Directory "/opt/lampp/phpmyadmin">AllowOverride AuthConfig Limit Order allow,deny Require all granted Allow from all </Directory>
 sudo cp -R apachetomcat /opt
 sudo /opt/tomcat/bin/catalina.sh start 
+
+############################################################Installation apache tomcat
+sudo apt-get update
+sudo apt-get install default-jdk
+sudo apt-get install tomcat8
+sudo apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
+	sudo vim /var/lib/tomcat8/conf/*				*config userstom
+############################################################Installation jenkins
+wget url war
+sudo cp origin /var/lib/tomcat8/webapps/
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
