@@ -17,3 +17,7 @@ https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=7
 
 
 remote.origin.url	https://github.com/linkedin/api-get-started.git
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78vwl6j2kxa4b6&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2FVITCG%2ECO_recruiting-personnel&state=987654321&scope=r_fullprofile
+
+http://www.w3schools.com/tags/ref_urlencode.asp
