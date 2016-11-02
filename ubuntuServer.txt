@@ -68,3 +68,23 @@ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
 sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
 sudo apt-get update
 sudo apt-get install jenkins
+
+############################################################Installation nexus
+
+Pull wget https://www.build-business-websites.co.uk/resources/nexus-repository-v3.tar.gz
+Unpack Nexus using tar -xvzf nexus-repository-v3.tar.gz
+Change directory to opt with cd /opt
+Use sudo to create nexus folder sudo mkdir nexus
+Jump into the nexus folder cd nexus
+Copy using sudo cp -R ~/nexus-3.0.1-01/* .
+Visit the nexus configuration file /opt/nexus/bin/nexus aptly named nexus.
+Add “nexus” to this line run_as_user='nexus'
+Add this setting NEXUS_HOME="/opt/nexus"
+Update the nexus configuration file » sudo cp <<nexus-config-file>> /opt/nexus/bin/nexus
+Make the nexus configuration executable sudo chmod a+x /opt/nexus/bin/nexus
+Give our new nexus user ownership » sudo chown -R nexus:nexus /opt/nexus
+Assume the position of nexus user » su - nexus
+Type in whoami to check who you are.
+To startup nexus we go to its bin folder cd /opt/nexus/bin
+It is time to fire up nexus ./nexus start
+The response Starting nexus is not the most verbose!
