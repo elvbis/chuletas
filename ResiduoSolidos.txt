@@ -10,3 +10,6 @@ http://peru21.pe/actualidad/comas-declarada-emergencia-sanitaria-acumulacion-bas
 http://www.bvsde.paho.org/sde/ops-sde/bvsde.shtml
 http://www.minam.gob.pe/calidadambiental/wp-content/uploads/sites/22/2013/10/Gu%C3%ADa-de-la-Estructura-de-Costos.pdf
 http://www.munimolina.gob.pe/index.php/servicios/programacion-de-recojo-basura-por-zonas
+
+https://www.thisisant.com/APIassets/Android_ANT_API/index.html
+https://forums.garmin.com/showthread.php?339891-New-Developer-FAQ

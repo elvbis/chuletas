@@ -1,0 +1,18 @@
+lo primero que tenemos que hacer es los siguientes caracteristicas:
+
+MOTOR DE BASE  DE DATOS postgresql 9
+JAR: postgresql-9.4-1200-jdbc41.jar
+TOMCAT 	: Apache-tomcat-8.0.20
+
+la configuracion netamente está en el servidor incluye los fichero de
+-* web.xml (no se incluyo por el momento pero posteriormente se debe de agregar
+
+)
+-* context.xml
+agregar el jar dentro de lib 
+
+EJECUCION:
+lanzamos la web:
+http://localhost:8080/WebWithJNDI/
+lanzamos el controlador:
+http://localhost:8080/WebWithJNDI/listUsers
