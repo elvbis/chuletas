@@ -1,0 +1,2 @@
+---removed blank space
+Preferences -> Java -> Editors -> Save Actions -> check "Perform the selected actions on save" -> check "Additional actions" -> click "Configure.." -> go to "Code organizing" tab -> check "Remove trailing whitespace" -> select "All lines".
