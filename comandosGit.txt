@@ -34,4 +34,4 @@ git push origin :old_branch                 								   # Delete the old branch
 git push --set-upstream origin new_branch   								   # Push the new branch, set local branch to track the new remote
 
 git remote add origin https://github.com/elvbis/springcrudhibernate.git		   #upload on repository existing
-git push -u origin master
+git push -u origin master													   # upload 
