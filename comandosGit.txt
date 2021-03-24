@@ -31,7 +31,14 @@ git push -u origin namebranch
 
 git branch -m old_branch new_branch         								   # Rename branch local    
 git push origin :old_branch                 								   # Delete the old branch    
-git push --set-upstream origin new_branch   								   # Push the new branch, set local branch to track the new remote
+git push --set-upstream origin develop   								   # Push the new branch, set local branch to track the new remote
 
 git remote add origin https://github.com/elvbis/springcrudhibernate.git		   #upload on repository existing
 git push -u origin master													   # upload 
+
+
+git clone https://user@gitlab.xxxx.com/xxx/project.git
+
+
+git checkout -b feature_branch_name												#create  new branch local
+git push -u origin feature_branch_name											# push branch local to remote.
