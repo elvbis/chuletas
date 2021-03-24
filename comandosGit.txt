@@ -42,3 +42,4 @@ git clone https://user@gitlab.xxxx.com/xxx/project.git
 
 git checkout -b feature_branch_name												#create  new branch local
 git push -u origin feature_branch_name											# push branch local to remote.
+git branch -r 																	# list branchs of remote repository
