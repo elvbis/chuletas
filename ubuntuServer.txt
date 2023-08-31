@@ -1,0 +1,114 @@
+sudo /etc/init.d/NetworkManager stop
+# Start: sudo /etc/init.d/NetworkManager start
+sudo vi /etc/network/interfaces
+
+## To configure a dynamic IP address
+auto eth0
+iface eth0 inet dhcp
+
+## Or configure a static IP
+auto eth0
+iface eth0 inet static
+  address 192.168.1.14
+  gateway 192.168.1.1
+  netmask 255.255.255.0
+  network 192.168.1.0
+  broadcast 192.168.1.255
+ 
+############################################################installation guesst adition
+sudo apt-get install virtualbox-guest-x11
+sudo reboot now
+sudo mount -t vboxsf <folder share> /media/folder create on ubuntu
+cd into folder create on ubuntu server
+############################################################Installation postgresql
+sudo apt-get install default-jre
+sudo apt-get install default-jdk
+sudo apt-get install oracle-javaxx-installer *xx version 6,7,8
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+	sudo -i -u postgres
+	psql
+		\l			*show list databases
+		\password postgres
+		\q			*You should now be back in the postgres Linux command prompt.
+		\conninfo
+		\du			* list role
+sudo vim /etc/postgresql/9.1/main/pg_hba.conf
+sudo /etc/init.d/postgresql {start|stop|restart|reload|force-reload|status} [version ..]
+
+############################################################Installation samba
+
+sudo apt-get install update
+sudo apt-get install samba smbclient
+	sudo mkdir /var/xxxx
+	sudo chmod 777 /var/xxxx
+	sudo chown -R $(whoami) ./
+	sudo chown -R ubuntu ./
+sudo vim /etc/samba/smb.conig    * change workgroup and add folder share on ubuntu server /var/ xxx
+sudo /etc/init.d/samba restart
+
+############################################################Installation xampp
+
+sudo chmod +x xampp-linux-x64-5.6.8-0-installer.run
+sudo ./xampp-linux-x64-5.6.8-0-installer.run
+	sudo /opt/lampp/lampp start | stop | restart
+	sudo vim /opt/lampp/etc/extra/httpd-xampp.conf 			* for config ip´s
+	<Directory "/opt/lampp/phpmyadmin">AllowOverride AuthConfig Limit Order allow,deny Require all granted Allow from all </Directory>
+sudo cp -R apachetomcat /opt
+sudo /opt/tomcat/bin/catalina.sh start 
+
+############################################################Installation apache tomcat
+sudo apt-get update
+sudo apt-get install default-jdk
+sudo apt-get install tomcat8
+sudo apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
+	sudo vim /var/lib/tomcat8/conf/*				*config userstom
+############################################################Installation jenkins
+wget url war
+sudo cp origin /var/lib/tomcat8/webapps/
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+
+$ rm file_to_be_deleted
+
+############################################################Installation nexus
+
+Pull wget https://www.build-business-websites.co.uk/resources/nexus-repository-v3.tar.gz
+Unpack Nexus using tar -xvzf nexus-repository-v3.tar.gz
+Change directory to opt with cd /opt
+Use sudo to create nexus folder sudo mkdir nexus
+Jump into the nexus folder cd nexus
+Copy using sudo cp -R ~/nexus-3.0.1-01/* .
+Visit the nexus configuration file /opt/nexus/bin/nexus aptly named nexus.
+Add “nexus” to this line run_as_user='nexus'
+Add this setting NEXUS_HOME="/opt/nexus"
+Update the nexus configuration file » sudo cp <<nexus-config-file>> /opt/nexus/bin/nexus
+Make the nexus configuration executable sudo chmod a+x /opt/nexus/bin/nexus
+Give our new nexus user ownership » sudo chown -R nexus:nexus /opt/nexus
+Assume the position of nexus user » su - nexus
+Type in whoami to check who you are.
+To startup nexus we go to its bin folder cd /opt/nexus/bin
+It is time to fire up nexus ./nexus start
+The response Starting nexus is not the most verbose!
+
+:::::::::::::::::::::::::::::::::DB POSTGRESQL;::::::::::::::::::::::::::::::::::::::::::
+
+ psql -U postgres							  ----> ingresamos a base de datos
+ list of rols 		:> \du
+ list of schemas 	:> \dn
+ 
+cambiar en pg_hba.conf /3.142.90.97
+psql -h 3.142.90.97 -p 5432 -d cachuelitodb -U postgres /Vr432023
+\c cachuelitodb
+service postgresql restart
+sudo service postgresql restart
+sudo systemctl status postgresql
+sudo systemctl stop postgresql
+
+-----------------------------VARIABLE ENVIROMENT--------------------------------------------
+export PSQL_DEV_DB_HOST=3.142.90.97
+export PSQL_DEV_DB_PORT=45432
+export PSQL_DEV_DB_USERNAME=postgres
+export PSQL_DEV_DB_PASSWORD=testdev

@@ -1,0 +1,41 @@
+git log --author="Jon"														   #find according to author commit 
+git log --stat
+git log --pretty=format:"%h - %an, %ar : %s"
+git log --pretty=format:"%h %s" --graph
+git log --pretty=format:"%h %s" 											   #show hash and messages
+git config credential.helper store											   #store user pass
+
+git branch -d the_local_branch                                                 #delete branch local
+git push origin :the_remote_branch											   #delete branch remote
+git rebase --onto branch~3 branch~1 branch									   #delete commit local
+git cherry -v                    											   #If you need to find out which of your local commits are not on the remote server do this:
+git reset --hard origin/master												   #if you want get change remote
+git revert dd61ab32															   #if revert on commit hash
+git branch -m master master-old  											   #rename master on local
+git push origin :master          											   #delete master on remote
+git push origin master-old       											   #create master-old on remote
+git checkout -b master seotweaks 											   #create a new local master on top of seotweaks
+git push origin master           											   #create master on remote
+git clean -f -n 															   #delete.- step one 
+git clean -f											                       #delete : step two
+
+git remote -v																   #View existing remotes
+origin  https://github.com/OWNER/REPOSITORY.git (fetch)
+origin  https://github.com/OWNER/REPOSITORY.git (push)
+
+git  remote add newname url													   #add new url for commit
+
+git log --oneline															   #show has and comment
+git branch -D namebranch													   #delete branch local
+git push -u origin namebranch
+
+git branch -m old_branch new_branch         								   # Rename branch local    
+git push origin :old_branch                 								   # Delete the old branch    
+git push --set-upstream origin new_branch   								   # Push the new branch, set local branch to track the new remote
+
+git remote add origin https://github.com/elvbis/springcrudhibernate.git		   #upload on repository existing
+git push -u origin master													   # upload to repository new branch
+git branch -d test															   # to delete branch local
+git push origin --delete test												   # to delete branch into repository
+git branch -a 																   # to view branchs 
+git config --global --add safe.directory '*'									#coment all warnings

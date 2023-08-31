@@ -1,0 +1,8 @@
+https://www.tutorialspoint.com/java_technology_tutorials.htm
+
+
+keytool -list -keystore B:\tools\jdk\jdk1.8.0_66\jre\lib\security\cacerts
+// si es jdk por defecto solo poner el nombre y ejecutar
+keytool -importcert -alias <nombre del alias> -file <nombre del certificado> -keystore cacerts
+si no
+keytool -import -keystore B:\tools\jdk\jdk1.8.0_66\jre\lib\security\cacerts -file B:\tools\jdk\jdk1.8.0_66\jre\lib\security\holas.com.pe.crt -alias certAlias

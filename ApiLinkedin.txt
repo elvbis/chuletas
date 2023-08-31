@@ -1,0 +1,23 @@
+"%JAVA_HOME%\bin\keytool" -genkey -alias tomcat -keyalg RSA
+certificad kestore
+"%JAVA_HOME%\bin\keytool" -genkey -alias tomcat -keyalg RSA
+
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78vwl6j2kxa4b6
+&redirect_uri=https%3A%2F%2Flocalhost%2F&state=987654321&scope=r_basicprofile
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=123456789&redirect_uri=https%3A%2F%2Felvbis.com%2Fauth%2Flinkedin&state=987654321&scope=r_basicprofile
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&state=987654321&scope=r_basicprofile
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&redirect_uri=http://localhost:8080/test&state=987654321&scope=r_basicprofile
+
+
+https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=78vwl6j2kxa4b6&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest&scope=r_basicprofile%2Cr_emailaddress&state=nhAC-nR-CgEwO3XS2ezANhuPBMz-IUmLPJYgGHlZvZ8B1pCfsGBU0PR0dZ5XxE4zbyeI0RLcKByqPLKkgQdqMm4s6DjFYqMCEehYA2iWT9MfioEHjPXGCt2USxUTF0wKBpflCUjG5URVlJa3qI7U3ydFOErZ4Hhnr9SVmKdf1bithYfbOqBx345o8LQLexbddQ687vP6y0szrIyCM6FHip1tCpOY3Hgg5FJQEFH1mCJ_yLunD5vDUN4VVfkQbcjk
+
+
+remote.origin.url	https://github.com/linkedin/api-get-started.git
+
+https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=78vwl6j2kxa4b6&redirect_uri=http%3A%2F%2Flocalhost%3A8080%2Ftest&state=987654321&scope=r_basicprofile
+
+http://www.w3schools.com/tags/ref_urlencode.asp
