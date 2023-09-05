@@ -37,5 +37,17 @@ git remote add origin https://github.com/elvbis/springcrudhibernate.git		   #upl
 git push -u origin master													   # upload to repository new branch
 git branch -d test															   # to delete branch local
 git push origin --delete test												   # to delete branch into repository
+git branch -d <branch name> 												   # to delete branch local repository
+git push origin -d branch-name
 git branch -a 																   # to view branchs 
 git config --global --add safe.directory '*'									#coment all warnings
+git push -uf origin main 
+git remote remove origin														# delete origin url
+
+cd existing_repo
+git remote rename origin old-origin
+git remote add origin url..ont.git(thiss is new url)
+git push -u origin --all
+git push -u origin --tags
+
+ssh -T git@github.com 

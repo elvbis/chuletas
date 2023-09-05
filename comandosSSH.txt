@@ -1,0 +1,10 @@
+ssh-keygen -t Algoritmo -C "elvishromero@gmail.com"
+ssh-keygen -t ed25519 -C "elvishromero@gmail.com"
+
+ssh-keygen -t rsa -b 4096 -C "elvishromero@gmail.com"
+
+sudo -u ubuntu git clone git@bitbucket.org:elvbis/chambitape-back.git
+
+-> .ssh/
+	->ssh-keygen -t rsa :no ponder nombre de archivo si pones tendras que configurar en archivo config.
+	->ssh-keygen -t rsa -b 4096 -C "elvishromero@gmail.com" : si deseas poner frase clave					
