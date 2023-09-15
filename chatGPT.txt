@@ -1,0 +1,14 @@
+crear un proyecto spring boot java jdk17 configurado con coneccion a base de datos postgresql 14.0 con patron de desarrollo modelo vista controlador, la parte vista debe estar configurado con thymeleaf con un mensaje "hello word"
+
+crear un controller dentro de paquete web, service dentro de paquete impl, service interface dentro de paquete service, repository JPA dentro del paquete reposirory cada clase relacionada e implementada con sus metodos CRUD
+crear una clase entity dentro del paquete repository.entity para la tabla cp_parameter el cual cuenta con sus columnas siquientes par_cod_group,par_cod_subgroup,par_short_description, par_long_description,
+par_num_val_1,
+par_num_val_2,
+par_num_val_3,
+par_status
+
+sus llaves principales conforma las columnas par_cod_group,par_cod_subgroup
+
+
+
+

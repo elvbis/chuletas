@@ -68,6 +68,14 @@ sudo apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
 
 ##########################UTILITARIOS UBUNTU################################## 
 
+lsb_release -a   			----------verifica caracteristicas ubuntu
+free -m						----------verifica memoria restante
+cat /proc/meminfo			----------verifica memoria information
+
+rm -rf ~/.local/share/Trash/*  ----clear trash
+
+watch -n 1 free -m											--liberar memoria ram
+sudo sync && sudo sysctl -w vm.drop_caches=3				--liberar memoria ram
 
 apt list -a | grep openjdk
 ls -al | grep .ssh
@@ -85,6 +93,15 @@ sudo service postgresql restart
 sudo systemctl status postgresql
 sudo systemctl stop postgresql
 
+-----------------------------CREATE USER UBUNTU--------------------------------------------
+ssh root@your_server_ip_address
+adduser sammy
+usermod -aG sudo sammy
+su - sammy
+groups user1				--verificar privilegios
+
+sudo gpasswd -a ${USER} docker 
+sudo service docker restart
 -----------------------------VARIABLE ENVIROMENT--------------------------------------------
 export PSQL_DEV_DB_HOST=3.142.90.97
 export PSQL_DEV_DB_PORT=45432
@@ -95,5 +112,5 @@ dial unix /var/run/docker.sock: connect: permission denied
 sudo addgroup --system docker
 sudo adduser $USER docker
 newgrp docker
-
+rm -r *
 rm -r /path/*  delete all file into directory

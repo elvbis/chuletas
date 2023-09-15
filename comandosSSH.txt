@@ -8,3 +8,21 @@ sudo -u ubuntu git clone git@bitbucket.org:elvbis/repoGit.git
 -> .ssh/
 	->ssh-keygen -t rsa :no ponder nombre de archivo si pones tendras que configurar en archivo config.
 	->ssh-keygen -t rsa -b 4096 -C "elvishromero@gmail.com" : si deseas poner frase clave					
+	
+
+# Generate a new key pair for Server 1
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/server1_rsa
+
+# Generate a new key pair for Server 2
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/server2_rsa
+
+:::::::::::::::::::::::::::::::ADD KEY INTO SERVER:::::::::::::::::::
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC3xBgu1u4EUo12XSeJ1q2It4blvOnBAnBfazgYpTTqEp9qNjWv4+V6p7zzQAs6zbl9OrAdLS5i2kjUY0Qi5EHdIdvZSRlBnXvIz1iORqLI8FJeidMzSdaZsbkJAs/Qyc1KB3ngT/FYVW9WQ02+/YS7IzibXQxvFOaxf9qGRt5VaxPLrHkYrPSr8xVDcy0DFp+DcbpLUbAIbt24GRsNHZmWmTxvdG3aeD2mGAOejkKcY0Y1VR+fXX71yDaZ8RXL/lFd01WHxeVXwHZPGiA2g/vaLRvoktIQ2zW969UYBNHqL2YpKlHgXXhy3ELAm01BcUUI5c85LjXVHbzw1mr8Aq2xPF0adX7pTo45DebOyjDqikD1RZyyK8GDSG/gnuJgoxh1UwjOuyfDxRp2MXWtfW/fX4dfMgQbgyjHRGqxlQ3rwZblx9pcDJkJ9wFm4Ir84J2bNFGCwvX0oKQllW+osmzjETxxxWLD/XPN3q0bExuBpmEZzzjc4GZBtvIIscDYwaFh2lccsRHQP4gpfVswgWJEG82sQgpTDaS6oJ7+Dgcaw+583oYMzpOfhOfawCWbpV6H4c/vY02qkhE/nL5Fml3l4I0eNOCt4gHUE3UOcUCOkaCdZv/q/dbnIa5vnExG01MJHtjTF6VC11sJb34E8bbUQIfsaYpmjc3PlYzO2C5omw== elvishromero@gmail.com
+" >> ~/.ssh/authorized_keys
+
+chmod 600 ~/.ssh/authorized_keys
+sudo vim /etc/ssh/sshd_config
+PasswordAuthentication no
+sudo systemctl restart sshd

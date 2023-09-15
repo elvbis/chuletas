@@ -1,0 +1,1 @@
+mvn -N io.takari:maven:0.7.7:wrapper			---> generate file mvnw and the mvnw.cmd files

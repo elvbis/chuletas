@@ -45,9 +45,15 @@ git push -uf origin main
 git remote remove origin														# delete origin url
 
 cd existing_repo
-git remote rename origin old-origin
+git init
+git remote rename origin old-origin1
 git remote add origin url..ont.git(thiss is new url)
+git remote add origin https://github.com/elvbis/thymeleafcrud.git
+git remote add origin https://github.com/elvbis/chambitape-back.git
 git push -u origin --all
 git push -u origin --tags
 
 ssh -T git@github.com 
+
+rm -r *
+https://TOKEN_GIT@github.com/elvbis/chambitape-back.git
