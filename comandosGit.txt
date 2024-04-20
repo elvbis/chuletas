@@ -42,6 +42,7 @@ git push origin -d branch-name
 git branch -a 																   # to view branchs 
 git config --global --add safe.directory '*'									#coment all warnings
 git push -uf origin main 
+git push --force																# force push very dangerus
 git remote remove origin														# delete origin url
 
 cd existing_repo
@@ -52,6 +53,8 @@ git remote add origin https://github.com/elvbis/thymeleafcrud.git
 git remote add origin https://github.com/elvbis/chambitape-back.git
 git push -u origin --all
 git push -u origin --tags
+
+git remote remove origin															# remove origin url of local
 
 ssh -T git@github.com 
 

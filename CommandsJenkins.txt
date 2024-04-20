@@ -1,0 +1,29 @@
+step 1 :  configure plugins 
+ “Manage Jenkins” > “Manage Plugins” >“Available tab” seaarch SonarQube
+Step 2: Generate Token in SonarQube Server
+Click on your Admin account Icon which will bring up a drop down menu. Click on “My Account“ and security opctions and generate token
+TOKEN_SONAR : sqa_82c8536d0905326fe13936ea8d3c47e96958fb69
+
+Step 3: Configure SonarQube in Jenkins
+	While still logged into Jenkins as an administrator go to “Manage Jenkins” > “Configure System“.
+	Scroll down to the SonarQube configuration section, click Add SonarQube, and add the values you will be prompted to provide.
+	These include a name you prefer, SonarQube server URL, that is where your SonarQube server is running at then the “Server authentication token“. For the Server authentication token, click on “Add” then “Jenkins” as shown below.
+	That will open up the Jenkins Credentials Provider. Leave the domain as it is, and choose “Secret Text” for Kind as shown below. Once that is done, enter the token we created in Step 2 for “Secret“, give it a Name/ID that will match with what the secret is all about, you can add a description if you like then hit “Add“.
+
+Step 4: Configure SonarQube Scanner in globals tools
+	Scroll down and look for “SonarQube Scanner“. Click on “Add SonarQube Scanner” tab so that we can add it here. Since we already have a working instance of SonarQube, uncheck “Install Automatically” and then beside “SONAR_RUNNER_HOME” environment variable, enter the path where SonarQube is installed in your server. For me it is “/opt/sonarqube/bin“. After that, hit “Apply” then “Save“.
+	
+Step 5: Create a Project in SonarQube
+
+Step 6: Do a test with a Java Project
+
+:::::::::::::::::::::::::::::::::::GITHUB::::::::::::::::::::::::
+step 0: install github integration plugin
+step 0.1: configure HOOKS aputando a jenkins "/github-webhook/"
+Step 1: Launch Jenkins and redirected to the Jenkins Dashboard. Now click on the "Manage Jenkins " link as highlighted below:
+Step 2: As soon as we will click on the Manage Jenkins link we will be redirected to the Manage Jenkins page. Now click on the "Manage Plugins " link highlighted below:
+step 3: Type "Git Plugin " in the Filter box and select the Git Plugin checkbox after its appearance.
+
+Step 1: Go to Jenkins Dashboard and click on the "New Item " link to create a new job highlighted in the red rectangle.
+TOKEN GITHUB : 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
+	

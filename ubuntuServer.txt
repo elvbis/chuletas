@@ -2,6 +2,8 @@ sudo /etc/init.d/NetworkManager stop
 # Start: sudo /etc/init.d/NetworkManager start
 sudo vi /etc/network/interfaces
 
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+
 ## To configure a dynamic IP address
 auto eth0
 iface eth0 inet dhcp

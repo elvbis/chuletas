@@ -12,3 +12,6 @@ sus llaves principales conforma las columnas par_cod_group,par_cod_subgroup
 
 
 
+crear un controller dentro de paquete web, service dentro de paquete impl, service interface dentro de paquete service, repository JPA dentro del paquete reposirory cada clase relacionada e implementada con sus metodos CRUD
+crear una clase entity dentro del paquete repository.entity para la tabla notice el cual cuenta con sus columnas siquientes id,title,description, sumary,
+public_date el desarrollo debe ser paginado

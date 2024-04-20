@@ -1,0 +1,11 @@
+﻿node -v
+ng --version                                               --> check angular version
+
+ng new --standalone <name_project>							--> crear new project angular.
+ng g environments
+
+#################plugin
+- server live
+- auto rename tag
+- tag wrapper
+

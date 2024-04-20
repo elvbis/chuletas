@@ -1,0 +1,2 @@
+nvm install v16.10.0         # Install v0.10.33
+nvm use v16.10.0             # Use v0.10.33
