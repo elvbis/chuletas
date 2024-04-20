@@ -1,0 +1,47 @@
+======install tools =====================
+jdk
+appium inspector
+nodejs
+AngularCli
+Androis Studio
+Intellij idea community
+	plugin cucumber para java
+==================Configure enviroment=================
+ANDROID_HOME D:\DESA\sdk
+APPIUM_HOME C:\Users\{USER}\AppData\Roaming\npm
+NODE_HOME C:\Program Files\nodejs
+
+path
+%ANDROID_HOME%\cmdline-tools\bin
+%ANDROID_HOME%\platform-tools
+%ANDROID_HOME%\platform
+%ANDROID_HOME%\tools
+
+======instalar el appium=================
+npm install -g appium
+appium driver list --installed
+npm install @appium/doctor --location=global
+appium-doctor -h
+sdkmanager --list
+sdkmanager "platform-tools" "platforms;android-28"
+adb devices
+appium driver install uiautomator2@2.45.1
+
+npm i appium-uiautomator2-driver
+
+appium-doctor --android      	
+appium -a 127.0.0.1 -p 4723 --session-override --use-drivers uiautomator2 --base-path /wd/hub --strict
+----
+---instalar driver 
+appium driver install uiautomator2@2.45.1
+---comando para desinstalar
+appium driver uninstall uiautomator2
+
+--------------- para error que no se conecta
+adb uninstall io.appium.uiautomator2.server
+adb uninstall io.appium.uiautomator2.server.test
+
+git branch -d norma
+validar tabla Posición consolidada
+
+appium -a 192.168.100.30 -p 4723 --session-override --use-drivers uiautomator2 --base-path /wd/hub

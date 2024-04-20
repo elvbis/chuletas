@@ -58,5 +58,7 @@ git remote remove origin															# remove origin url of local
 
 ssh -T git@github.com 
 
+git config --global user.name "Elvis Humareda Romero"
+git config --global user.email ElvisHRomero@gmail.com
 rm -r *
 https://TOKEN_GIT@github.com/elvbis/chambitape-back.git
