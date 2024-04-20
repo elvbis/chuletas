@@ -2,7 +2,7 @@ step 1 :  configure plugins
  “Manage Jenkins” > “Manage Plugins” >“Available tab” seaarch SonarQube
 Step 2: Generate Token in SonarQube Server
 Click on your Admin account Icon which will bring up a drop down menu. Click on “My Account“ and security opctions and generate token
-TOKEN_SONAR : sqa_82c8536d0905326fe13936ea8d3c47e96958fb69
+TOKEN_SONAR : datosImportantes
 
 Step 3: Configure SonarQube in Jenkins
 	While still logged into Jenkins as an administrator go to “Manage Jenkins” > “Configure System“.
@@ -25,5 +25,5 @@ Step 2: As soon as we will click on the Manage Jenkins link we will be redirecte
 step 3: Type "Git Plugin " in the Filter box and select the Git Plugin checkbox after its appearance.
 
 Step 1: Go to Jenkins Dashboard and click on the "New Item " link to create a new job highlighted in the red rectangle.
-TOKEN GITHUB : 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
+TOKEN GITHUB : datosImportantes
 	
