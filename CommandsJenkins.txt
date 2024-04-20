@@ -25,5 +25,5 @@ Step 2: As soon as we will click on the Manage Jenkins link we will be redirecte
 step 3: Type "Git Plugin " in the Filter box and select the Git Plugin checkbox after its appearance.
 
 Step 1: Go to Jenkins Dashboard and click on the "New Item " link to create a new job highlighted in the red rectangle.
-TOKEN GITHUB : datosImportantes
+TOKEN_GITHUB : datosImportantes
 	
