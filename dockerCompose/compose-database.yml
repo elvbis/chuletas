@@ -1,0 +1,49 @@
+version: "3.5"
+
+services:
+  postgresdev:
+    image: elvbisdocker/serverdb:v1
+    container_name: dev-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD={pass}
+    ports:
+      - 5430:5432
+    networks:
+      - netdev
+    volumes:
+      - ./db-data-dev/:/var/lib/postgresql/data/
+      - ./create-db.sql:/docker-entrypoint-initdb.d/create_database.sql
+  postgrescert:
+    image: elvbisdocker/serverdb:v1
+    container_name: cert-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD={pass}
+    ports:
+      - 5431:5432
+    networks:
+      - netcert
+    volumes:
+      - ./db-data-cert/:/var/lib/postgresql/data/
+      - ./create-db.sql:/docker-entrypoint-initdb.d/create_database.sql
+  postgresprod:
+    image: elvbisdocker/serverdb:v1
+    container_name: prod-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD={pass}
+    ports:
+      - 5432:5432
+    networks:
+      - netprod
+    volumes:
+      - ./db-data-prod/:/var/lib/postgresql/data/
+      - ./create-db.sql:/docker-entrypoint-initdb.d/create_database.sql
+networks:
+  netdev:
+    name: dev-network
+  netcert:
+    name: cert-network
+  netprod:
+    name: prod-network
