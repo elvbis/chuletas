@@ -3,10 +3,6 @@ git log --stat
 git log --pretty=format:"%h - %an, %ar : %s"
 git log --pretty=format:"%h %s" --graph
 git log --pretty=format:"%h %s" 											   #show hash and messages
-git log --online --graph --decorate
-
-git tag v0.0.1 -m "mi tag message"												# create tags
-git push --tags																	# subir al repo remoto todos los tags
 git config credential.helper store											   #store user pass
 
 git branch -d the_local_branch                                                 #delete branch local
@@ -47,13 +43,3 @@ git clone https://user@gitlab.xxxx.com/xxx/project.git
 git checkout -b feature_branch_name												#create  new branch local
 git push -u origin feature_branch_name											# push branch local to remote.
 git branch -r 																	# list branchs of remote repository
-
-
-git checkout -b feature/req003
-git push -u origin feature/req003
-
-git remote set-url origin git@github.com:USERNAME/REPOSITORY.git.
-
-https://github.com/santander-group-peru/oobb-global-position-service.git
-
-https://github.com/santander-group-peru/oobb-global-position-service.git
