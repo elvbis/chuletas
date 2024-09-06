@@ -36,8 +36,8 @@ git push -u origin namebranch
 git branch -m old_branch new_branch         								   # Rename branch local    
 git push origin :old_branch                 								   # Delete the old branch    
 git push --set-upstream origin develop   								   # Push the new branch, set local branch to track the new remote
-
-git remote add origin https://github.com/elvbis/springcrudhibernate.git		   #upload on repository existing
+git remote remove origin
+git remote add origin https://github.com/elvbis/Wallet-FunctionApp-GenPKPass.git	   #upload on repository existing
 git push -u origin master													   # upload 
 
 
@@ -48,12 +48,16 @@ git checkout -b feature_branch_name												#create  new branch local
 git push -u origin feature_branch_name											# push branch local to remote.
 git branch -r 																	# list branchs of remote repository
 
+git push origin -d feature/y-2024-001													#delete remote branch
+git branch -d feature/y-2024-001														#delete local branch
 
-git checkout -b feature/req003
-git push -u origin feature/req003
+git checkout -b feature/y-2024-001
+git push -u origin feature/y-2024-001
 
 git remote set-url origin git@github.com:USERNAME/REPOSITORY.git.
 
-https://github.com/santander-group-peru/oobb-global-position-service.git
+		
+git config --global --list													 #Config global git
 
-https://github.com/santander-group-peru/oobb-global-position-service.git
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
